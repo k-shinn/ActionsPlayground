@@ -2,8 +2,6 @@ name: diff check local
 
 on:
   pull_request:
-    types:
-      - opened
     branches:
       - master
 
