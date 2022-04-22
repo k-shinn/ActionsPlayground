@@ -13,3 +13,11 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+      # composite actions
+      - id: compsite
+        uses: k-shinn/hello-world-composite-action@v1.1
+        with:
+          who-to-greet: 'hothotdog'
+      - run: echo random-number ${{ steps.compsite.outputs.random-number }}
+        shell: bash
