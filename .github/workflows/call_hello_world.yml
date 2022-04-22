@@ -16,7 +16,7 @@ jobs:
 
       # composite actions
       - id: compsite
-        uses: k-shinn/hello-world-composite-action@v1.1
+        uses: k-shinn/hello-world-composite-action@v1
         with:
           who-to-greet: 'hothotdog'
       - run: echo random-number ${{ steps.compsite.outputs.random-number }}
