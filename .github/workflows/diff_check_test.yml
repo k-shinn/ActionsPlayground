@@ -17,6 +17,6 @@ jobs:
           cache: gradle
       - name: diff-check
         id: diff
-        uses: k-shinn/file-diff@v0.1
+        uses: k-shinn/file-diff@master
 #      - name: result
 #        run: echo "${{ steps.diff.outputs.isChanged }}"
