@@ -18,4 +18,5 @@ jobs:
       - name: diff-check
         id: diff
         uses: k-shinn/file-diff@v0.1
-        run: echo "$GITHUB_BASE_REF $GITHUB_HEAD_REF"
+      - name: result
+        run: echo "${{ steps.diff-check.outputs.isChanged }}"
