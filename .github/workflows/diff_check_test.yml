@@ -18,5 +18,5 @@ jobs:
       - name: diff-check
         id: diff
         uses: k-shinn/file-diff@master
-#      - name: result
-#        run: echo "${{ steps.diff.outputs.isChanged }}"
+      - name: result
+        run: echo "${{ steps.diff.outputs.isChanged }}"
