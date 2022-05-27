@@ -1,4 +1,4 @@
-name: diff check local
+name: diff check test
 
 on:
   pull_request:
@@ -16,5 +16,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
-      - name: hoge
+      - name: diff-check
+        id: diff
+        uses: k-shinn/file-diff@v0.1
         run: echo "$GITHUB_BASE_REF $GITHUB_HEAD_REF"
