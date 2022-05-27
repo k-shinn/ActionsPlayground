@@ -2,8 +2,7 @@ name: diff check test
 
 on:
   pull_request:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:
@@ -18,5 +17,8 @@ jobs:
           cache: gradle
       - name: diff-check
         id: diff
-        uses: k-shinn/file-diff@v0.1
-        run: echo "$GITHUB_BASE_REF $GITHUB_HEAD_REF"
+        uses: k-shinn/file-diff@master
+        with:
+          target: 'CreateTest.md'
+      - name: result
+        run: echo "${{ steps.diff.outputs.isChanged }}"
