@@ -17,8 +17,8 @@ jobs:
           cache: gradle
       - name: diff-check
         id: diff
-        uses: k-shinn/file-diff@master
+        uses: k-shinn/file-diff@url_echo_test
         with:
-          target: 'ChangeTest.md'
+          target: 'CreateTest.md'
       - name: result
         run: echo "${{ steps.diff.outputs.isChanged }}"
