@@ -19,6 +19,6 @@ jobs:
         id: diff
         uses: k-shinn/file-diff@url_echo_test
         with:
-          target: 'CreateTest.md'
+          target: 'ChangeTest.md'
       - name: result
         run: echo "${{ steps.diff.outputs.isChanged }}"
