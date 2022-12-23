@@ -17,7 +17,7 @@ jobs:
           cache: gradle
       - name: diff-check
         id: diff
-        uses: k-shinn/file-diff@url_echo_test
+        uses: k-shinn/file-diff@update_node
         with:
           target: 'CreateTest.md'
       - name: result
