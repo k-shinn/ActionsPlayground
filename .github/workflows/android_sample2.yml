@@ -2,8 +2,7 @@ name: android_sample2
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:

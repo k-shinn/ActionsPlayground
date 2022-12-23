@@ -8,16 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
       - name: diff-check
         id: diff
-        uses: k-shinn/file-diff@url_echo_test
+        uses: k-shinn/file-diff@v1.0
         with:
           target: 'ChangeTest.md'
       - name: result
