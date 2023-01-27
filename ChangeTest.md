@@ -1,3 +1,3 @@
 FileDiffのテスト用
-hoge
+hogehoge
 fuga
